@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\Validator;
 //use App\Http\Requests\StoreComicRequest;
 //use App\Http\Requests\UpdateComicRequest;
 
@@ -93,7 +94,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $form_data = $request->all();
+        $form_data = $this->validation($request->all());
 
         $comic->update($form_data);
 
@@ -111,5 +112,29 @@ class ComicController extends Controller
         $comic->delete();
 
         return redirect()->route('comics.index');
+    }
+
+
+    private function validation($data)
+    {
+        $validator = Validator::make(
+            $data,
+            [
+                'title'         =>  'required|max:50',
+                'description'   =>  'required',
+                'thumb'         =>  'required',
+                'cover_image'   =>  'required',
+                'thumb2'        =>  'required',
+                'price'         =>  'required|max:10',
+                'series'        =>  'required|max:20',
+                'sale_date'     =>  'required|max:10',
+                'type'          =>  'required|max:20',
+                'artists'       =>  'required',
+                'writers'       =>  'required',
+            ]
+
+        )->validate();
+
+        return $validator;
     }
 }
