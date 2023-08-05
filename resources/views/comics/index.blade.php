@@ -4,6 +4,9 @@
 <div class="index-page">
     <div class="container py-3">
         <div class="row">
+            <div class="col-12 text-center">
+                <a href="{{ Route('comics.create') }}" class="btn btn-success">Aggiungi Comic</a>
+            </div>
             @foreach ($comics as $comic)
                 <div class="col-4 my-5">
                     <div class="card">
