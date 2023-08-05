@@ -38,9 +38,13 @@
                                 <a href="{{ Route('comics.edit', $comic) }}" class="btn btn-warning mx-1">
                                     <i class="fa-solid fa-edit"></i>
                                 </a>
-                                <a href="#" class="btn btn-danger mx-1">
-                                    <i class="fa-solid fa-trash"></i>
-                                </a>
+                                <form action="{{ Route('comics.destroy', $comic) }}" method="POST" class="d-inline-block">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger mx-1">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </form>
                                 <div class="py-2 mt-3">
                                     <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-dark">Altro...</a>
                                 </div>
