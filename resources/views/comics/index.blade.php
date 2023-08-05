@@ -31,8 +31,19 @@
                                 <strong>Prezzo:</strong>
                                 <span>{{ $comic->price }}</span>
                             </div>
-                            <div class="py-2">
-                                <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-dark">Altro...</a>
+                            <div class="card-footer text-center">
+                                <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-primary mx-1">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn btn-warning mx-1">
+                                    <i class="fa-solid fa-edit"></i>
+                                </a>
+                                <a href="#" class="btn btn-danger mx-1">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+                                <div class="py-2 mt-3">
+                                    <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-dark">Altro...</a>
+                                </div>
                             </div>
                         </div>
                     </div>
