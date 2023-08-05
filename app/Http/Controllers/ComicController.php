@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Comic;
-use App\Http\Requests\StoreComicRequest;
-use App\Http\Requests\UpdateComicRequest;
+//use App\Http\Requests\StoreComicRequest;
+//use App\Http\Requests\UpdateComicRequest;
 
 class ComicController extends Controller
 {
@@ -32,10 +33,10 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreComicRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreComicRequest $request)
+    public function store(Request $request)
     {
         $form_data = $request->all();
 
@@ -53,10 +54,12 @@ class ComicController extends Controller
         $comic->artists = $form_data['artists'];
         $comic->writers = $form_data['writers'];
 
+
         $comic->save();
 
         return redirect()->route('comics.show', $comic->id);
     }
+
 
     /**
      * Display the specified resource.
