@@ -35,7 +35,7 @@
                                 <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-primary mx-1">
                                     <i class="fa-solid fa-eye"></i>
                                 </a>
-                                <a href="#" class="btn btn-warning mx-1">
+                                <a href="{{ Route('comics.edit', $comic) }}" class="btn btn-warning mx-1">
                                     <i class="fa-solid fa-edit"></i>
                                 </a>
                                 <a href="#" class="btn btn-danger mx-1">

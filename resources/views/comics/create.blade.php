@@ -28,11 +28,11 @@
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Cover Image</label>
-                                <input type="text" name="cover_image" id="cover_image" placeholder="Inserisci la cover image" class="form-control">
+                                <input type="text" name="cover_image" id="cover_image" placeholder="Inserisci la cover image" class="form-control" required>
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Thumb 2</label>
-                                <input type="url" name="thumb2" id="thumb2" placeholder="Inserisci la thumb 2" class="form-control">
+                                <input type="url" name="thumb2" id="thumb2" placeholder="Inserisci la thumb 2" class="form-control" required>
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Prezzo</label>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Serie</label>
-                                <input type="text" name="series" id="series" placeholder="Inserisci la serie" class="form-control">
+                                <input type="text" name="series" id="series" placeholder="Inserisci la serie" class="form-control" required>
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Data di Rilascio</label>
@@ -48,15 +48,15 @@
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Tipo</label>
-                                <input type="text" name="type" id="type" placeholder="Inserisci il tipo" class="form-control">
+                                <input type="text" name="type" id="type" placeholder="Inserisci il tipo" class="form-control" required>
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Artisti</label>
-                                <textarea name="artists" id="artists" placeholder="Inserisci gli artisti" class="form-control"></textarea>
+                                <textarea name="artists" id="artists" placeholder="Inserisci gli artisti" class="form-control" required></textarea>
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Scrittori</label>
-                                <textarea name="writers" id="writers" placeholder="Inserisci gli scrittori" class="form-control"></textarea>
+                                <textarea name="writers" id="writers" placeholder="Inserisci gli scrittori" class="form-control" required></textarea>
                             </div>
                             <div class="col-12 text-center my-2">
                                 <button type="submit" class="btn btn-success">Aggiungi</button>
